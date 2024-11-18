@@ -376,6 +376,87 @@
         .project-link:hover {
             color: var(--accent);
         }
+        .summary-container {
+            padding: 20px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            color: #E6F1FF;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .boxes-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .summary-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .summary-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .box-title {
+            color: #64FFDA;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid rgba(100, 255, 218, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .competency-list, .achievement-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .competency-list li {
+            color: #CCD6F6;
+            padding: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .competency-list li:before {
+            content: '▹';
+            color: #64FFDA;
+            margin-right: 10px;
+        }
+
+        .achievement-list li {
+            color: #CCD6F6;
+            padding: 10px 0;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .achievement-list li:before {
+            content: '•';
+            color: #64FFDA;
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .boxes-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -384,26 +465,42 @@
     <section class="hero">
         <div class="content" data-aos="fade-right">
             <h1 class="glitch-text">UDDIT</h1>
-            <p class="subtitle">Flutter Development Expert</p>
-            <p>Experienced Flutter Developer with a proven track record in creating high-performance, cross-platform mobile applications. Specialized in building scalable solutions using Flutter, Dart, and Firebase. Strong expertise in state management, REST APIs, and clean architecture principles. Proficient in implementing complex UI/UX designs, custom animations, and third-party integrations. Demonstrated ability to optimize app performance and deliver user-centric solutions.<hr>
-
-                <h2>Core Competencies:</h2><br>
-                • Flutter/Dart Development<br>
-                • UI/UX Implementation<br>
-                • Firebase Integration<br>
-                • State Management (Provider, Bloc, GetX)<br>
-                • RESTful API Integration<br>
-                • Database Design (SQLite, MongoDB)<br>
-                • Version Control (Git)<br>
-                • Clean Code Architecture<br>
-                • Cross-Platform Development<br>
-                • App Performance Optimization<hr>
-                
-                <h2>Recent Achievements:</h2><br>
-                • Successfully delivered 10+ production apps with 100K+ combined downloads<br>
-                • Reduced app loading time by 40% through code optimization<br>
-                • Implemented automated testing, reducing bug reports by 60%<br>
-                • Led development teams in delivering complex projects on time</p>
+            <p class="subtitle">&nbsp;&nbsp;&nbsp;Flutter Developer</p>
+            <div class="summary-container">
+                <p class="intro-text">
+                    Experienced Flutter Developer with a proven track record in creating high-performance flutter apps.
+                </p>
+        
+                <div class="boxes-container">
+                    <div class="summary-box">
+                        <h3 class="box-title">Core Competencies</h3>
+                        <ul class="competency-list">
+                            <li>Flutter/Dart Development</li>
+                            <li>UI/UX Implementation</li>
+                            <li>Firebase Integration</li>
+                            <li>State Management (Provider, Bloc, GetX)</li>
+                            <li>RESTful API Integration</li>
+                            <li>Database Design (SQLite, MongoDB)</li>
+                            <li>Version Control (Git)</li>
+                            <li>Clean Code Architecture</li>
+                            <li>Cross-Platform Development</li>
+                            <li>App Performance Optimization</li>
+                        </ul>
+                    </div>
+        
+                    <div class="summary-box">
+                        <h3 class="box-title">Recent Achievements</h3>
+                        <ul class="achievement-list">
+                            <li>Successfully delivered 10+ production apps with 100K+ combined downloads</li>
+                            <li>Reduced app loading time by 40% through code optimization</li>
+                            <li>Implemented automated testing, reducing bug reports by 60%</li>
+                            <li>Led development teams in delivering complex projects on time</li>
+                            <li>Maintained 4.5+ star ratings across all published applications</li>
+                            <li>Integrated complex features like real-time chat and payment systems</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="social-links">
                 <a href="mailto:2021umt1791@mnit.ac.in" class="social-link">
                     <i class="fas fa-envelope"></i> Email
